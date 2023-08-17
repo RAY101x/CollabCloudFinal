@@ -1,0 +1,30 @@
+composer global require laravel/installer
+composer install
+npm install
+npm run dev / build
+cp .env.example .env
+php artisan key:generate
+///change DB_DATABASE in .env
+copy to env=====
+SCOUT_DRIVER=tntsearch
+ALGOLIA_APP_ID=SDHSQER3GT
+ALGOLIA_SECRET=11531752f6f02c7f0384880db3c1d81b
+
+php artisan migrate ////DO NOT DO [Run migrate from webpage]
+composer require laravel/jetstream
+php artisan jetstream:install livewire
+php artisan jetstream:install livewire --teams
+php artisan serve
+
+composer update
+composer require staudenmeir/laravel-adjacency-list:"^^^^1.0"
+composer require laravel/scout   [18]
+php artisan vendor:publish --provider="Laravel\Scout\ScoutServiceProvider"
+composer require teamtnt/laravel-scout-tntsearch-driver
+
+composer require algolia/algoliasearch-client-php 			
+composer require staudenmeir/laravel-adjacency-list
+
+composer update algolia/algoliasearch-client-php
+php artisan scout:import "App\Models\Obj"
+
